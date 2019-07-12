@@ -124,7 +124,10 @@ RCT_EXPORT_METHOD(hide){
 
     return;
 }
-
+RCT_EXPORT_METHOD(hideAnimated){
+    [_pick cancleAction];
+    return;
+}
 RCT_EXPORT_METHOD(select: (NSArray*)data){
 
     if (self.pick) {
