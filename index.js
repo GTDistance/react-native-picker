@@ -57,7 +57,9 @@ export default {
     hide(){
         Picker.hide();
     },
-
+    hideAnimated(){
+        Picker.hideAnimated();
+    },
     select(arr, fn) {
         if(ios){
             Picker.select(arr);
