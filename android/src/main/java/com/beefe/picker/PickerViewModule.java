@@ -450,6 +450,20 @@ public class PickerViewModule extends ReactContextBaseJavaModule implements Life
     }
 
     @ReactMethod
+    public void hideAnimated() {
+        switch (curStatus) {
+            case 0:
+                returnData = pickerViewAlone.getSelectedData();
+                break;
+            case 1:
+                returnData = pickerViewLinkage.getSelectedData();
+                break;
+        }
+        commonEvent(EVENT_KEY_CANCEL);
+        hide();
+    }
+    
+    @ReactMethod
     public void isPickerShow(Callback callback) {
         if (callback == null)
             return;
