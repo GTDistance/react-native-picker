@@ -235,6 +235,8 @@ export default class Picker {
      * @memberof Picker
      */
     static hide(): void
+    
+    static hideAnimated(): void
 
     /**
      * Toggles the visibility of the picker
